@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patitas & Co. - Productos</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f9f5ee; color: #333; }
+
+    nav {
+      background: #2a7a52;
+      padding: 15px 6%;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { color: white; font-size: 1.4rem; font-weight: bold; text-decoration: none; }
+    .logo span { color: #f0a93c; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul a { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+    nav ul a:hover, nav ul a.active { color: #f0a93c; }
+
+    .page-header {
+      background: linear-gradient(135deg, #2a7a52 0%, #1a4d33 100%);
+      color: white; padding: 45px 6%;
+    }
+    .page-header h1 { font-size: 2rem; margin-bottom: 8px; }
+    .page-header p { opacity: 0.8; }
+
+    .section { padding: 45px 6%; }
+    .section h2 {
+      font-size: 1.3rem; color: #2a7a52; margin-bottom: 22px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section h2::after {
+      content: ''; flex: 1; height: 2px; background: #e8923a; border-radius: 2px;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 40px; }
+    .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 12px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.13); }
+    .card img { width: 100%; height: 160px; object-fit: cover; }
+    .card-body { padding: 14px; }
+    .tag { font-size: 0.68rem; color: #2a7a52; text-transform: uppercase; letter-spacing: 1.5px; font-weight: bold; }
+    .card-body h3 { font-size: 0.95rem; color: #222; margin: 6px 0 5px; }
+    .card-body p { font-size: 0.82rem; color: #777; line-height: 1.5; }
+    .price { color: #e8923a; font-weight: bold; font-size: 1rem; margin-top: 10px; display: block; }
+
+    .btn {
+      display: inline-block; padding: 11px 26px;
+      background: #e8923a; color: white; text-decoration: none;
+      border-radius: 6px; font-weight: bold; transition: background 0.2s;
+    }
+    .btn:hover { background: #c97825; }
+
+    footer { background: #1a4d33; color: rgba(255,255,255,0.7); text-align: center; padding: 22px; font-size: 0.88rem; }
+    footer a { color: #f0a93c; text-decoration: none; }
+
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 450px)  { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">🐾 Patitas<span>&Co.</span></a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html" class="active">Productos</a></li>
+      <li><a href="tiendas.html">Tiendas</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>🛒 Nuestros Productos</h1>
+    <p>Todo lo que tu perro o gato necesita para vivir feliz y cómodo.</p>
+  </div>
+
+  <div class="section">
+    <h2>🐶 Para perros</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&auto=format&fit=crop" alt="Cama">
+        <div class="card-body">
+          <span class="tag">Descanso</span>
+          <h3>Cama ortopédica</h3>
+          <p>Espuma de memoria, varios tamaños.</p>
+          <span class="price">S/ 129.00</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&auto=format&fit=crop" alt="Juguetes">
+        <div class="card-body">
+          <span class="tag">Juguetes</span>
+          <h3>Set de juguetes activos</h3>
+          <p>Pack de 5 juguetes resistentes.</p>
+          <span class="price">S/ 45.00</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&auto=format&fit=crop" alt="Correa">
+        <div class="card-body">
+          <span class="tag">Paseos</span>
+          <h3>Correa retráctil 5m</h3>
+          <p>Con freno de seguridad y mango ergonómico.</p>
+          <span class="price">S/ 38.00</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=400&auto=format&fit=crop" alt="Snacks">
+        <div class="card-body">
+          <span class="tag">Alimentación</span>
+          <h3>Snacks naturales</h3>
+          <p>Sin aditivos, sabor pollo y res.</p>
+          <span class="price">S/ 32.00</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>🐱 Para gatos</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&auto=format&fit=crop" alt="Rascador">
+        <div class="card-body">
+          <span class="tag">Entretenimiento</span>
+          <h3>Casa-rascador 3 niveles</h3>
+          <p>Sisal natural y superficie suave.</p>
+          <span class="price">S/ 95.00</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=400&auto=format&fit=crop" alt="Juguete gato">
+        <div class="card-body">
+          <span class="tag">Juguetes</span>
+          <h3>Varita interactiva</h3>
+          <p>Con plumas y cascabel, estimula el instinto.</p>
+          <span class="price">S/ 22.00</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400&auto=format&fit=crop" alt="Grooming">
+        <div class="card-body">
+          <span class="tag">Cuidado</span>
+          <h3>Kit de grooming</h3>
+          <p>Cepillo, cortauñas y champú incluidos.</p>
+          <span class="price">S/ 89.00</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518715308788-3005759c7d09?w=400&auto=format&fit=crop" alt="Comedero">
+        <div class="card-body">
+          <span class="tag">Alimentación</span>
+          <h3>Comedero doble acero</h3>
+          <p>Base antideslizante, fácil de lavar.</p>
+          <span class="price">S/ 55.00</span>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      <a href="index.html" class="btn" style="background:#2a7a52;">← Volver al inicio</a>
+      &nbsp;
+      <a href="tiendas.html" class="btn">Ver tiendas →</a>
+    </p>
+  </div>
+
+  <footer>
+    © 2024 Patitas &amp; Co. &nbsp;|&nbsp; Lima, Perú &nbsp;|&nbsp; 📞 (01) 234-5678 &nbsp;|&nbsp;
+    <a href="mailto:hola@patitasyco.pe">hola@patitasyco.pe</a>
+  </footer>
+
+</body>
+</html>

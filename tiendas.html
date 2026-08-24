@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patitas & Co. - Tiendas</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f9f5ee; color: #333; }
+
+    nav {
+      background: #2a7a52;
+      padding: 15px 6%;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { color: white; font-size: 1.4rem; font-weight: bold; text-decoration: none; }
+    .logo span { color: #f0a93c; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul a { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: bold; font-size: 0.95rem; }
+    nav ul a:hover, nav ul a.active { color: #f0a93c; }
+
+    .page-header {
+      background: linear-gradient(135deg, #2a7a52 0%, #1a4d33 100%);
+      color: white; padding: 45px 6%;
+    }
+    .page-header h1 { font-size: 2rem; margin-bottom: 8px; }
+    .page-header p { opacity: 0.8; }
+
+    .section { padding: 45px 6%; }
+    .section > p.intro { color: #666; margin-bottom: 32px; font-size: 1rem; }
+
+    .tiendas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .tienda { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,0.09); transition: transform 0.2s; }
+    .tienda:hover { transform: translateY(-5px); }
+
+    .tienda img { width: 100%; height: 200px; object-fit: cover; }
+    .tienda-body { padding: 20px; }
+    .tienda-body h3 { color: #2a7a52; font-size: 1.15rem; margin-bottom: 14px; }
+    .tienda-body p { font-size: 0.88rem; color: #555; margin-bottom: 7px; line-height: 1.5; }
+    .tienda-body p strong { color: #333; }
+
+    .horarios { background: #f0f9f4; border-left: 4px solid #2a7a52; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 14px; font-size: 0.85rem; color: #444; }
+    .horarios p { margin-bottom: 4px; }
+
+    .badge {
+      display: inline-block; background: #e8923a; color: white;
+      font-size: 0.7rem; font-weight: bold; padding: 3px 10px; border-radius: 20px;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+    }
+
+    .info-strip { background: #2a7a52; color: white; padding: 35px 6%; text-align: center; }
+    .info-strip h2 { margin-bottom: 10px; font-size: 1.4rem; }
+    .info-strip p { opacity: 0.85; margin-bottom: 5px; }
+
+    .btn {
+      display: inline-block; padding: 11px 26px;
+      background: #e8923a; color: white; text-decoration: none;
+      border-radius: 6px; font-weight: bold; transition: background 0.2s;
+    }
+    .btn:hover { background: #c97825; }
+
+    footer { background: #1a4d33; color: rgba(255,255,255,0.7); text-align: center; padding: 22px; font-size: 0.88rem; }
+    footer a { color: #f0a93c; text-decoration: none; }
+
+    @media (max-width: 768px) { .tiendas-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">🐾 Patitas<span>&Co.</span></a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="tiendas.html" class="active">Tiendas</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>📍 Nuestras Tiendas</h1>
+    <p>Encuéntranos en 3 ubicaciones en Lima. ¡Te esperamos con las patitas abiertas!</p>
+  </div>
+
+  <div class="section">
+    <p class="intro">Visítanos y recibe asesoría personalizada. Nuestro equipo está listo para ayudarte a elegir lo mejor para tu mascota.</p>
+
+    <div class="tiendas-grid">
+
+      <div class="tienda">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&auto=format&fit=crop" alt="Tienda Miraflores">
+        <div class="tienda-body">
+          <span class="badge">Tienda principal</span>
+          <h3>🏪 Miraflores</h3>
+          <p>📍 <strong>Av. Larco 540</strong>, Miraflores</p>
+          <p>📞 (01) 234-5678</p>
+          <div class="horarios">
+            <p>🕐 Lun – Sáb: 9:00 am – 8:00 pm</p>
+            <p>🕐 Dom: 10:00 am – 6:00 pm</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tienda">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop" alt="Tienda San Isidro">
+        <div class="tienda-body">
+          <span class="badge" style="background:#2a7a52;">Abierto ahora</span>
+          <h3>🏪 San Isidro</h3>
+          <p>📍 <strong>Calle Los Libertadores 220</strong>, San Isidro</p>
+          <p>📞 (01) 234-5679</p>
+          <div class="horarios">
+            <p>🕐 Lun – Sáb: 9:00 am – 8:00 pm</p>
+            <p>🕐 Dom: Cerrado</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tienda">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop" alt="Tienda Surco">
+        <div class="tienda-body">
+          <span class="badge" style="background:#2a7a52;">Abierto ahora</span>
+          <h3>🏪 Surco</h3>
+          <p>📍 <strong>Av. Primavera 1180</strong>, Surco</p>
+          <p>📞 (01) 234-5680</p>
+          <div class="horarios">
+            <p>🕐 Lun – Sáb: 10:00 am – 7:00 pm</p>
+            <p>🕐 Dom: 10:00 am – 5:00 pm</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:32px;">
+      <a href="index.html" class="btn" style="background:#2a7a52;">← Volver al inicio</a>
+      &nbsp;
+      <a href="productos.html" class="btn">Ver productos →</a>
+    </p>
+  </div>
+
+  <div class="info-strip">
+    <h2>¿Tienes alguna consulta?</h2>
+    <p>📞 (01) 234-5678 &nbsp;|&nbsp; ✉️ hola@patitasyco.pe</p>
+    <p>También puedes escribirnos por WhatsApp al 📱 999 123 456</p>
+  </div>
+
+  <footer>
+    © 2024 Patitas &amp; Co. &nbsp;|&nbsp; Lima, Perú &nbsp;|&nbsp; 📞 (01) 234-5678 &nbsp;|&nbsp;
+    <a href="mailto:hola@patitasyco.pe">hola@patitasyco.pe</a>
+  </footer>
+
+</body>
+</html>
